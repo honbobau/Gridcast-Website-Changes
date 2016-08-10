@@ -1,0 +1,45 @@
+@import 'variables';
+@import 'mixins';
+@import '../components/header/header';
+@import '../components/footer/footer';
+@import '../../node_modules/foundation-sites/assets/foundation';
+
+// font
+* {
+  font-family: $primary-font-family;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $primary-font-family; 
+}
+
+// primary buttons
+button {
+  @include button-primary;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  @include button-primary-hover;
+}
+
+// anchor tags
+a {
+  color: #22c0de;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+// content
+.content.display {
+  display: block;
+}
+
+.content.hidden {
+  display: hidden;
+}

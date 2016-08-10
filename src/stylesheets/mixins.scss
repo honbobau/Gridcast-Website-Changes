@@ -1,0 +1,19 @@
+@import 'variables';
+
+// primary buttons
+@mixin button-primary {
+  color: $tertiary-color;
+  background-color: #22C0DE;
+  border: none;
+  border-color: $tertiary-color;
+  border-radius: 3px;
+  padding: 10px 20px;
+  box-shadow: none !important;
+  transition: 0.4s;
+}
+
+@mixin button-primary-hover {
+  background-color: #25CBEB;
+  text-decoration: underline;
+  cursor: pointer;
+}

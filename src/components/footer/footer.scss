@@ -1,0 +1,39 @@
+@import '../../stylesheets/variables';
+
+#footer {
+  background-color: $secondary-color; 
+  padding: 50px 0;
+  border-top: 1px solid #e7e7e7;
+
+  h4 {
+    color: $secondary-font-color;
+  }
+
+  h4:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .large-4 p {
+    padding: 0;
+  }
+
+  // social media icons
+  i {
+    color: #999999;
+    margin-right: 5px;
+    transition: 0.5s;
+  }
+
+  i#twitter:hover {
+    color: #39D2FE;
+  }
+
+  i#facebook:hover {
+    color: #435FA8;
+  }
+
+  i#linkedin:hover {
+    color: #65ADD2;
+  }
+}
