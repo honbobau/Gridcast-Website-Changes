@@ -35,11 +35,30 @@ a:hover {
   text-decoration: underline;
 }
 
-// content
-.content.display {
-  display: block;
+// content transition
+.content-enter {
+  opacity: 0.01;
 }
 
-.content.hidden {
-  display: hidden;
+.content-enter.content-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.content-leave {
+  opacity: 1;
+}
+
+.content-leave.content-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-out;
+}
+
+.content-appear {
+  opacity: 0.01;
+}
+
+.content-appear.content-appear-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
 }

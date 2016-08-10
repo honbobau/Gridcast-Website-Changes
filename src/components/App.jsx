@@ -1,6 +1,14 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Header from './header/header.jsx';
 import Footer from './footer/footer.jsx';
+import About from './about/about.jsx';
+import Index from './index/index.jsx';
+import Contact from './contact/contact.jsx';
+import Portfolio from './portfolio/portfolio.jsx';
+import Services from './services/services.jsx';
+import WhatsNew from './whats_new/whats_new.jsx';
 
 class App extends React.Component {
 
@@ -18,28 +26,27 @@ class App extends React.Component {
   }
 
   render() {
-    let index, about, portfolio, services, whatsnew, contact;
-
-    index = about = portfolio = services = whatsnew = contact = 'content hide'
+    let contentRender;
+    const page = this.state.page;
 
     switch (this.state.page) {
       case 'index':
-        index = 'content display'
+        contentRender = <Index />
         break;
       case 'about':
-        about = 'content display'
+        contentRender = <About />
         break;
       case 'portfolio':
-        portfolio = 'content display'
+        contentRender = <Portfolio />
         break;
       case 'services':
-        services = 'content display'
+        contentRender = <Services />
         break;
       case 'whatsnew':
-        whatsnew = 'content display'
+        contentRender = <WhatsNew />
         break;
       case 'contact':
-        contact = 'content display'
+        contentRender = <Contact />
         break;
       default:
         break;
@@ -48,33 +55,21 @@ class App extends React.Component {
     return (
       <div id='body'>
         <div className='row'>
-          <Header activeNav={ this.state.page }
+          <Header activeNav={ page }
                   renderPage={ this.renderPage }
           />
         </div>
 
-        <div className={index} id="index">
-          <h1>Test Index</h1>
-        </div>
-
-        <div className={about} id="about">
-          <h1>Test About</h1>
-        </div>
-
-        <div className={portfolio} id="portfolio">
-          <h1>Test Portfolio</h1>
-        </div>
-
-        <div className={services} id="services">
-          <h1>Test Services</h1>
-        </div>
-
-        <div className={whatsnew} id="whatsnew">
-          <h1>Test What's New</h1>
-        </div>
-
-        <div className={contact} id="contact">
-          <h1>Test Contact</h1>
+        <div className='row'>
+          <ReactCSSTransitionGroup 
+            transitionName='content' 
+            transitionAppear={true}
+            transitionAppearTimeout={500}
+            transitionEnterTimeout={500} 
+            transitionLeaveTimeout={300}
+          >
+            <div id={ page } key={ page }>{ contentRender }</div>
+          </ReactCSSTransitionGroup>
         </div>
 
         <div id='footer'>
