@@ -1,0 +1,24 @@
+@import '../../stylesheets/variables';
+
+#services {
+  margin-bottom: 140px;
+
+  p {
+    font-size: 15px;
+  }
+
+  .blue {
+    color: $secondary-font-color;
+  } 
+
+  .services-info {
+    text-align: center;
+  }
+
+  .services-align {
+    display: flex;
+    align-items: center;
+  }
+
+
+}

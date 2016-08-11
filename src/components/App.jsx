@@ -54,13 +54,10 @@ class App extends React.Component {
 
     return (
       <div id='body'>
-        <div className='row'>
           <Header activeNav={ page }
                   renderPage={ this.renderPage }
           />
-        </div>
 
-        <div className='row'>
           <ReactCSSTransitionGroup 
             transitionName='content' 
             transitionAppear={true}
@@ -68,9 +65,8 @@ class App extends React.Component {
             transitionEnterTimeout={500} 
             transitionLeaveTimeout={300}
           >
-            <div id={ page } key={ page }>{ contentRender }</div>
+            <div key={ page }>{ contentRender }</div>
           </ReactCSSTransitionGroup>
-        </div>
 
         <div id='footer'>
           <Footer />

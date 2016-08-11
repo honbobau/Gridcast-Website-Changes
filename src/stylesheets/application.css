@@ -46,6 +46,63 @@
   #footer i#linkedin:hover {
     color: #65ADD2; }
 
+#index #index-slider-container img {
+  border-radius: 1%;
+  width: 100%;
+  height: auto; }
+#index ul#index-whatwedo {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+  #index ul#index-whatwedo li {
+    display: inline-block;
+    width: 20%;
+    text-align: center; }
+  #index ul#index-whatwedo li:hover {
+    color: #22C0DE;
+    text-decoration: underline;
+    cursor: pointer; }
+  #index ul#index-whatwedo img:hover {
+    animation-name: floating;
+    -webkit-animation-name: floating;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite; }
+@keyframes floating {
+  0% {
+    transform: translateY(0%); }
+  50% {
+    transform: translateY(8%); }
+  100% {
+    transform: translateY(0%); } }
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(0%); }
+  50% {
+    -webkit-transform: translateY(8%); }
+  100% {
+    -webkit-transform: translateY(0%); } }
+#about #about-mission-statement p {
+  color: #22C0DE; }
+#about img {
+  width: 100%;
+  height: auto; }
+#about #about-story {
+  padding-bottom: 130px; }
+
+#services {
+  margin-bottom: 140px; }
+  #services p {
+    font-size: 15px; }
+  #services .blue {
+    color: #22C0DE; }
+  #services .services-info {
+    text-align: center; }
+  #services .services-align {
+    display: flex;
+    align-items: center; }
+
 /**
  * Foundation for Sites by ZURB
  * Version 6.2.3
@@ -3689,5 +3746,28 @@ a:hover {
 .content-appear.content-appear-active {
   opacity: 1;
   transition: opacity 500ms ease-in; }
+
+.floating {
+  animation-name: floating;
+  -webkit-animation-name: floating;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite; }
+
+@keyframes floating {
+  0% {
+    transform: translateY(0%); }
+  50% {
+    transform: translateY(8%); }
+  100% {
+    transform: translateY(0%); } }
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(0%); }
+  50% {
+    -webkit-transform: translateY(8%); }
+  100% {
+    -webkit-transform: translateY(0%); } }
 
 /*# sourceMappingURL=application.css.map */

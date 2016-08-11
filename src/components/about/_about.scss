@@ -1,0 +1,18 @@
+@import '../../stylesheets/variables';
+
+#about {
+
+  #about-mission-statement p {
+    color: $secondary-font-color;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  #about-story {
+    padding-bottom: 130px;
+  }
+
+}

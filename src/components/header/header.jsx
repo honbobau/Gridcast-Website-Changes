@@ -31,14 +31,14 @@ class Header extends React.Component {
     }
 
     return(
-      <header id='header'>
+      <header id='header' className='row'>
         <div className='columns large-4'>
           <a>
             <img id='header-logo' src='../../../images/header/header_logo.png' />
           </a>
         </div>
 
-        <div className='columns large-9'>
+        <div className='columns large-8'>
           <ul id='header-navbar'>
             <li className={index} id='header-home' onClick={ () => render('index') }>Home</li>
             <li className={about} id='header-about' onClick={ () => render('about') }>About</li>
